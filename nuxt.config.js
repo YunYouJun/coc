@@ -1,3 +1,5 @@
+const pkg = require('./package')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -7,7 +9,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Coc Info Web by Nuxt' }
+      { hid: 'description', name: 'description', content: pkg.description },
+      { hid: 'keywords', name: 'keywords', content: pkg.keywords }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -22,10 +25,6 @@ module.exports = {
     'element-theme-ink',
     { src: '~assets/css/coc.scss', lang: 'scss' }
   ],
-
-  /*
-  ** Add element-ui in our app, see plugins/element-ui.js file
-  */
   plugins: [
     '~/plugins/axios',
     { src: '~/plugins/element-ui', ssr: true },
@@ -39,6 +38,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    publicPath: '/nuxt/',
     vendor: [
       '~/plugins/vue-about-me'
     ],

@@ -4,6 +4,10 @@
   "description": "Coc Info Web by Nuxt",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "private": true,
+  "keywords": [
+    "coc",
+    "api"
+  ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development nuxt",
     "build": "nuxt build",

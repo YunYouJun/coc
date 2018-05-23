@@ -9,12 +9,12 @@
       </h2>
 
       <el-row :gutter="20">
-        <el-col :span="3" :offset="9">
+        <el-col :xs="{span:24}" :md="{span:4, offset:8}">
           <nuxt-link to="/api">
             <el-button type="success" plain>API</el-button>
           </nuxt-link>
         </el-col>
-        <el-col :span="3">
+        <el-col :xs="{span:24}" :md="{span:4}">
           <a
             href="https://github.com/YunYouJun/coc"
             target="_blank">
@@ -50,8 +50,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   text-align: center;
+}
+
+.el-col {
+  padding: 10px;
 }
 </style>

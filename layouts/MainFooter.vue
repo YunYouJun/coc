@@ -12,7 +12,7 @@ export default {
   data () {
     return {
       copyright: {
-        name: 'coc',
+        name: 'COC',
         repoName: 'coc',
         author: 'YunYouJun',
         logo: 'fas fa-cloud'
