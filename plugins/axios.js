@@ -5,8 +5,9 @@ const PROD_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAw
 const TOKEN = process.env.NODE_ENV == 'production' ? PROD_TOKEN : LOCAL_TOKEN
 
 export default function ({ $axios, redirect }) {
+  $axios.setToken(TOKEN, 'Bearer')
+  
   $axios.onRequest(config => {
-    // this.setToken(TOKEN, 'Bearer')
     console.log('Making request to ' + config.url)
   })
 

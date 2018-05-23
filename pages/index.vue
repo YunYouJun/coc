@@ -36,6 +36,14 @@ export default {
       title: 'COC'
     }
   },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'COC API Web' }
+      ]
+    }
+  },
   components: {
     AppLogo
   }
@@ -46,5 +54,4 @@ export default {
 #app {
   text-align: center;
 }
-
 </style>

@@ -19,7 +19,8 @@ module.exports = {
   */
   css: [
     // 'element-ui/lib/theme-chalk/index.css'
-    'element-theme-ink'
+    'element-theme-ink',
+    { src: '~assets/css/coc.scss', lang: 'scss' }
   ],
 
   /*
@@ -55,7 +56,7 @@ module.exports = {
       }
     }
   },
-  module: [
+  modules: [
     '@nuxtjs/axios',
   ],
   axios: {

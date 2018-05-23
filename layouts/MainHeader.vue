@@ -5,14 +5,9 @@
     </el-menu-item>
     <el-submenu index="/api">
       <template slot="title">API DEMO</template>
-      <el-menu-item index="/clans">clans</el-menu-item>
-      <el-menu-item index="2-3">players</el-menu-item>
-      <el-submenu index="2-4">
-        <template slot="title">选项4</template>
-        <el-menu-item index="2-4-1">选项1</el-menu-item>
-        <el-menu-item index="2-4-2">选项2</el-menu-item>
-        <el-menu-item index="2-4-3">选项3</el-menu-item>
-      </el-submenu>
+      <el-menu-item v-for="(apiItem, key) in apiItems" :key="key" :index="'/api' + apiItem.index">
+        {{ apiItem.title }}
+      </el-menu-item>
     </el-submenu>
   </el-menu>
 </template>
@@ -28,6 +23,18 @@ export default {
           title: 'COC',
           index: '/',
         }
+      ],
+      apiItems: [
+        {
+          title: '部落',
+          name: 'clans',
+          index: '/clans',
+        },
+        {
+          title: '玩家',
+          name: 'players',
+          index: '/players',
+        },
       ]
     }
   },

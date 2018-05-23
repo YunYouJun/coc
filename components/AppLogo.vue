@@ -1,7 +1,7 @@
 <template>
   <div class="VueToNuxtLogo">
     <img src="../assets/gear.png">
-    <!-- <img src="../assets/img/Clash_Barbarian.png"> -->
+    <!-- <img src="../assets/img/Clash_Barbarian.png" width="300"> -->
   </div>
 </template>
 

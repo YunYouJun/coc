@@ -1,18 +1,30 @@
 <template>
-  <el-card>
-    test
-  </el-card>
+  <div class="text-center">
+    <img src="~/assets/img/Clash_Barbarian.png" width="300">
+    <h1> API Test </h1>
+  </div>
 </template>
 
 <script>
-import axios from '~/plugins/axios'
-
 export default {
-  async asyncData ({ params }) {
-    let { data } = await axios.get(`players/#Q0V9UYCV`)
-    // return { title: data.title }
-    return data
+  data () {
+    return {
+      title: 'API'
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'API Test' }
+      ]
+    }
   }
+  // async asyncData ({ app }) {
+  //   let { data } = await app.$axios.get(`players/%23Q0V9UYCV`)
+  //   // return { title: data.title }
+  //   return data
+  // }
 }
 </script>
 

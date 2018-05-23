@@ -1,6 +1,6 @@
 {
   "name": "coc",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Coc Info Web by Nuxt",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "private": true,
@@ -22,7 +22,8 @@
     "node-sass": "^4.9.0",
     "nuxt": "^1.0.0",
     "sass-loader": "^7.0.1",
-    "vue-about-me": "^0.0.4"
+    "vue-about-me": "^0.0.4",
+    "vue-i18n": "^7.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
