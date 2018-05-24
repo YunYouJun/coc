@@ -8,6 +8,7 @@ addons:
 install:
   - yarn
 script:
+  - export PROD_TOKEN=$TOKEN
   - npm run build
 after_success:
   - export SSHPASS=$VPS_PWD

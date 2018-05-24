@@ -1,7 +1,6 @@
 <template>
   <div class="VueToNuxtLogo">
-    <img src="../assets/gear.png">
-    <!-- <img src="../assets/img/Clash_Barbarian.png" width="300"> -->
+    <img src="~/assets/img/Clash_Barbarian.png" width="300">
   </div>
 </template>
 
@@ -12,8 +11,8 @@
   transform: rotateX(180deg);
   position: relative;
   overflow: hidden;
-  height: 180px;
-  width: 245px;
+  /* height: 180px; */
+  /* width: 245px; */
 }
 
 @keyframes turn {

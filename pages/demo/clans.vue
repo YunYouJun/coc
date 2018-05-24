@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     async getClanInfo () {
-      let clanInfo = await this.$axios.get('api/clans/' + this.clanTag.replace('#', '%23'))
+      let clanInfo = await this.$axios.get(this.clanTag.replace('#', '%23'))
       .then(function(res){
         console.log(res)
         return res.data

@@ -2,14 +2,17 @@
 
 [![Build Status](https://www.travis-ci.org/YunYouJun/coc.svg?branch=master)](https://www.travis-ci.org/YunYouJun/coc)
 
-Use Coc API to display and analyze
+> Coc Info Web
 
-> Coc Info Web by Nuxt
+![野蛮人](https://raw.githubusercontent.com/YunYouJun/coc/master/assets/img/Clash_Barbarian.png)
+
+Use Coc API to display and analyze
 
 ## Base
 
 - [Clash Of Clans API](https://developer.clashofclans.com)
 - [API Address](https://api.clashofclans.com/v1/)
+- [Nuxt](https://nuxtjs.org)
 
 ## Build Setup
 
@@ -27,3 +30,7 @@ $ npm start
 # generate static project
 $ npm run generate
 ```
+
+## BackUp
+
+- [heroku](https://coc-api.herokuapp.com) (No Token)

@@ -1,11 +1,8 @@
-# STATIC
+# gh-pages
 
-This directory contains your static files.
-Each file inside this directory is mapped to /.
+emmm, You Find It!
 
-Example: /static/robots.txt is mapped as /robots.txt.
+起初是想使用 GitHub Pages 托管， 写纯前端的。
 
-More information about the usage of this directory in the documentation:
-https://nuxtjs.org/guide/assets#static
-
-**This directory is not required, you can delete it if you don't want to use it.**
+但是 COC 的 API 限制了 IP 地址，每申请一个 TOKEN 输入一个 IP ，而且不是和域名绑定，
+所以最后不得不用自己的 Nginx 服务器进行反向代理。
