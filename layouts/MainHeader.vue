@@ -44,6 +44,10 @@ export default {
               name: '机智一族',
               path: '/LLP0GYCU'
             },
+            {
+              name: '琦开得胜&机智一族',
+              path: '/we'
+            }
           ]
         },
         {
