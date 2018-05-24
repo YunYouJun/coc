@@ -17,7 +17,7 @@
     "precommit": "npm run lint",
     "predeploy": "cross-env NODE_ENV=production npm run generate",
     "deploy": "gh-pages -d dist",
-    "heroku-postbuild": "sh deploy-heroku.sh NODE_API_TOKEN",
+    "heroku-postbuild": "sh deploy-heroku.sh",
     "heroku": "git push heroku master"
   },
   "dependencies": {
