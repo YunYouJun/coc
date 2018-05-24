@@ -9,6 +9,7 @@ addons:
 install:
   - yarn
 script:
-  - npm run deploy
+  - npm run build
 after_success:
-  - curl -L https://raw.githubusercontent.com/YunYouJun/coc/master/deploy.sh | /bin/sh"
+  - export SSHPASS=$TOKEN
+  - sshpass -e ssh -o stricthostkeychecking=no 139.199.22.90 "sh /data/wwwroot/coc.yunyoujun.cn/deploy-ci.sh"
