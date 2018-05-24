@@ -1,5 +1,7 @@
 # coc
 
+[![Build Status](https://www.travis-ci.org/YunYouJun/coc.svg?branch=master)](https://www.travis-ci.org/YunYouJun/coc)
+
 Use Coc API to display and analyze
 
 > Coc Info Web by Nuxt

@@ -5,7 +5,7 @@
     </el-menu-item>
     <el-submenu index="/api">
       <template slot="title">API DEMO</template>
-      <el-menu-item v-for="(apiItem, key) in apiItems" :key="key" :index="'/api' + apiItem.index">
+      <el-menu-item v-for="(apiItem, key) in apiItems" :key="key" :index="'/demo' + apiItem.index">
         {{ apiItem.title }}
       </el-menu-item>
     </el-submenu>

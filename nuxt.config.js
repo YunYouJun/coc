@@ -60,7 +60,7 @@ module.exports = {
     '@nuxtjs/axios',
   ],
   axios: {
-    proxy: true,
+    proxy: true
   },
   proxy: {
     '/api/': { target: 'https://api.clashofclans.com/v1/', pathRewrite: {'^/api/': ''} }

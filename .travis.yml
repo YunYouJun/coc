@@ -1,0 +1,14 @@
+
+language: node_js
+node_js:
+  - lts/*
+addons:
+  apt:
+    packages:
+    - sshpass
+install:
+  - yarn
+script:
+  - npm run deploy
+after_success:
+  - curl -L https://raw.githubusercontent.com/YunYouJun/coc/master/deploy.sh | /bin/sh"
