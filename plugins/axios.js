@@ -2,7 +2,11 @@ const LOCAL_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTA
 
 const PROD_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjZjMmJhMGQ0LWIxYzEtNDNkNC05YjhlLWVhYzMxNjE5ZThlYiIsImlhdCI6MTUyNjkwNzU1Nywic3ViIjoiZGV2ZWxvcGVyLzBlNmQ4YjRiLTY1YTktMTVlZS0yNTFlLTliYzMxNGFhM2Y0NSIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjEzOS4xOTkuMjIuOTAiXSwidHlwZSI6ImNsaWVudCJ9XX0.Ry8xiD2kwW5ATJdHV7UyQUNfe5pKP-zBigi8Ho76DvhZRAhc7uTh3mamfw0O5cRSbd3gV71WKwHc_BDvTyGKIA'
 
-const TOKEN = process.env.NODE_ENV === 'production' ? PROD_TOKEN : LOCAL_TOKEN
+let TOKEN = process.env.NODE_ENV === 'production' ? PROD_TOKEN : LOCAL_TOKEN
+
+if (process.env.NODE_ENV === 'heroku' && process.env.TOKEN) {
+  TOKEN = process.env.TOKEN
+}
 
 export default function ({ $axios, redirect }) {
   console.log(process.env.NODE_ENV, TOKEN)

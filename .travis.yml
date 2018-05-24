@@ -1,4 +1,3 @@
-
 language: node_js
 node_js:
   - lts/*
@@ -12,4 +11,4 @@ script:
   - npm run build
 after_success:
   - export SSHPASS=$VPS_PWD
-  - sshpass -e ssh -o stricthostkeychecking=no 139.199.22.90 "sh /data/wwwroot/coc.yunyoujun.cn/deploy-ci.sh"
+  - sshpass -e ssh -o stricthostkeychecking=no root@139.199.22.90 "sh /data/wwwroot/coc.yunyoujun.cn/deploy-ci.sh"
