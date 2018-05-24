@@ -11,5 +11,5 @@ install:
 script:
   - npm run build
 after_success:
-  - export SSHPASS=$TOKEN
+  - export SSHPASS=$VPS_PWD
   - sshpass -e ssh -o stricthostkeychecking=no 139.199.22.90 "sh /data/wwwroot/coc.yunyoujun.cn/deploy-ci.sh"
