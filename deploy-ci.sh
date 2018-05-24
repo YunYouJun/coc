@@ -1,3 +1,6 @@
+$TOKEN=$1
+export NODE_ENV='production'
+export PROD_TOKEN=$TOKEN
 cd /data/wwwroot/coc.yunyoujun.cn
 git checkout master
 git pull
