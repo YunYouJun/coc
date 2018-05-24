@@ -6,6 +6,11 @@ Use Coc API to display and analyze
 
 > Coc Info Web by Nuxt
 
+## Base
+
+- [Clash Of Clans API](https://developer.clashofclans.com)
+- [API Address](https://api.clashofclans.com/v1/)
+
 ## Build Setup
 
 ``` bash
