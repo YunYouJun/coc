@@ -2,7 +2,8 @@ import env from '../env'
 
 let TOKEN = process.env.NODE_ENV === 'production' ? process.env.PROD_TOKEN : env.LOCAL_TOKEN
 // heroku
-if (process.env.NODE_ENV === 'heroku' && process.env.TOKEN) {
+if (process.env.TOKEN) {
+  console.log(process.env.TOKEN)
   TOKEN = process.env.TOKEN
 }
 
