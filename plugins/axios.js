@@ -2,9 +2,9 @@ import env from '../env'
 
 let TOKEN = process.env.NODE_ENV === 'production' ? process.env.PROD_TOKEN : env.LOCAL_TOKEN
 // heroku
-if (process.env.TOKEN) {
-  console.log(process.env.TOKEN)
-  TOKEN = process.env.TOKEN
+if (process.env.NODE_API_TOKEN) {
+  console.log(process.env.NODE_API_TOKEN)
+  TOKEN = process.env.NODE_API_TOKEN
 }
 
 export default function ({ $axios, redirect }) {
