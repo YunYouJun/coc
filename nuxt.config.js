@@ -39,9 +39,6 @@ module.exports = {
   */
   build: {
     publicPath: '/nuxt/',
-    vendor: [
-      '~/plugins/vue-about-me'
-    ],
     /*
     ** Run ESLint on save
     */
