@@ -27,8 +27,7 @@ module.exports = {
   ],
   plugins: [
     '~/plugins/axios',
-    { src: '~/plugins/element-ui', ssr: true },
-    { src: '~/plugins/vue-about-me', ssr: false }
+    { src: '~/plugins/element-ui', ssr: true }
   ],
   /*
   ** Customize the progress bar color
