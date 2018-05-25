@@ -24,6 +24,9 @@
 <script>
 export default {
   name: 'MainHeader',
+  components: {
+
+  },
   data () {
     return {
       router: true,
@@ -55,7 +58,7 @@ export default {
           path: '/players'
         },
         {
-          name: 'API DEMO',
+          name: 'DEMO',
           path: 'demo',
           children: [
             {

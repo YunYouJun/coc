@@ -41,7 +41,8 @@ export default {
       }, {
         prop: 'expLevel',
         label: '等级',
-        width: 100
+        width: 100,
+        sortable: true
       }, {
         prop: 'trophies',
         label: '奖杯',
