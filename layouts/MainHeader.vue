@@ -40,6 +40,10 @@ export default {
           path: '/clans',
           children: [
             {
+              name: '搜索',
+              path: '/'
+            },
+            {
               name: '琦开得胜',
               path: '/28VPJVGC'
             },
