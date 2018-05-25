@@ -2,8 +2,15 @@
   <div>
     <el-card>
       <el-input placeholder="请输入内容" v-model="clanTag" @keyup.enter.native="getClanInfo">
-        <template slot="prepend">部落标签</template>
-        <el-button slot="append" icon="el-icon-search" @click="getClanInfo"></el-button>
+        <template slot="prepend">
+          <el-select v-model="select" slot="prepend" placeholder="请选择">
+            <el-option label="部落标签" value="1"></el-option>
+            <el-option label="订单号" value="2"></el-option>
+            <el-option label="用户电话" value="3"></el-option>
+          </el-select>
+          <div></div>
+          <el-button slot="append" icon="el-icon-search" @click="getClanInfo"></el-button>
+        </template>
       </el-input>
     </el-card>
     <hr>
@@ -29,7 +36,7 @@ export default {
   },
   methods: {
     async getClanInfo () {
-      let clanInfo = await this.$axios.get(this.clanTag.replace('#', '%23'))
+      let clanInfo = await this.$axios.get('api/clans/' + this.clanTag.replace('#', '%23'))
       .then(function(res){
         console.log(res)
         return res.data

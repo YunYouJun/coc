@@ -63,14 +63,14 @@ export default {
         },
         {
           name: 'DEMO',
-          path: 'demo',
+          path: '/demo',
           children: [
             {
-              name: '部落',
+              name: 'clans',
               path: '/clans'
             },
             {
-              name: '玩家',
+              name: 'players',
               path: '/players'
             },
           ]
