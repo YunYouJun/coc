@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import utils from '~/plugins/utils'
 import ClanMember from '~/components/clan/ClanMember'
 
 export default {
@@ -31,7 +32,7 @@ export default {
   methods: {
     getClanInfoByTag (clanTag) {
       let self = this
-      return this.$axios.get('api/clans/' + clanTag.replace('#', '%23'))
+      return this.$axios.get('api/clans/' + utils.tagify(clanTag))
       .then(function(res){
         self.clanInfo = res.data
         return res.data

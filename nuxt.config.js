@@ -27,7 +27,8 @@ module.exports = {
   css: [
     // 'element-ui/lib/theme-chalk/index.css'
     'element-theme-ink',
-    { src: '~assets/css/coc.scss', lang: 'scss' }
+    { src: '~assets/css/coc.scss', lang: 'scss' },
+    'prismjs/themes/prism.css'
   ],
   plugins: [
     '~/plugins/axios',

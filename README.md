@@ -14,6 +14,10 @@ Use Coc API to display and analyze
 - [API Address](https://api.clashofclans.com/v1/)
 - [Nuxt](https://nuxtjs.org)
 
+## Function
+
+- DEMO (use prism to highlight)
+
 ## Build Setup
 
 ``` bash

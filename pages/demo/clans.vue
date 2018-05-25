@@ -1,58 +1,78 @@
 <template>
   <div>
-    <el-card>
-      <el-input placeholder="请输入内容" v-model="clanTag" @keyup.enter.native="getClanInfo">
+    <el-card shadow="hover">
+      <el-input placeholder="请输入部落标签" v-model="clanTag" @keyup.enter.native="getClanInfoByTag(clanTag)">
         <template slot="prepend">
-          <el-select v-model="select" slot="prepend" placeholder="请选择">
-            <el-option label="部落标签" value="1"></el-option>
-            <el-option label="订单号" value="2"></el-option>
-            <el-option label="用户电话" value="3"></el-option>
+          <el-select v-model="select" placeholder="部落标签" @change="getClanInfoByTag(clanTag)">
+            <el-option v-for="option in options" :key="option.value" :label="option.label" :value="option.value"></el-option>
           </el-select>
-          <div></div>
-          <el-button slot="append" icon="el-icon-search" @click="getClanInfo"></el-button>
         </template>
+        <el-button slot="append" icon="el-icon-search" @click="getClanInfoByTag(clanTag)"></el-button>
       </el-input>
     </el-card>
     <hr>
-    <el-card>
-      <pre>
-        {{ clanInfo }}
-      </pre>
+    <el-card shadow="hover">
+      <display-data :data="clanInfo"></display-data>
     </el-card>
   </div>
 </template>
 
 <script>
+import utils from '~/plugins/utils'
+import DisplayData from '~/components/demo/DisplayData'
+
 export default {
+  components: {
+    DisplayData
+  },
   data () {
     return {
-      select: 'clans',
+      select: '',
       clanTag: '#28VPJVGC',
-      clanInfo: {}
+      options: [{
+        label: '部落信息',
+        value: ''
+      }, {
+        label: '成员列表',
+        value: 'members',
+      }, {
+        label: '对战日志',
+        value: 'warlog',
+      }, {
+        label: '当前部落战',
+        value: 'currentwar',
+      }],
+      clanInfo: '',
     }
   },
   mounted () {
-    this.getClanInfo()
+    this.getClanInfoByTag(this.clanTag)
   },
   methods: {
-    async getClanInfo () {
-      let clanInfo = await this.$axios.get('api/clans/' + this.clanTag.replace('#', '%23'))
-      .then(function(res){
-        console.log(res)
+    getClanInfoByTag (clanTag) {
+      let self = this
+      return this.$axios.get('api/clans/' + utils.tagify(clanTag) + '/' + this.select)
+      .then(function(res){        
+        self.clanInfo = res.data
         return res.data
       })
       .catch(function(e){
         console.log(e)
         if (e.response.data) {
-          return e.response.data.reason
+          self.$message({
+            showClose: true,
+            message: e.response.data.reason,
+            type: 'error'
+          })
         }
       })
-      this.clanInfo = clanInfo
-    }
+    },
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+.el-select {
+  width: 130px;
+}
 </style>
