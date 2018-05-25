@@ -6,7 +6,8 @@
       style="width: 100%">
       <el-table-column
         type="index"
-        width="50">
+        width="40"
+        fixed>
       </el-table-column>
       <el-table-column
         v-for="(item, key) in member"

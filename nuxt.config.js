@@ -19,8 +19,6 @@ module.exports = {
     script: [
       // 腾讯统计
       { src: 'http://tajs.qq.com/stats?sId=65859583' },
-      // cnzz
-      { src: 'https://s22.cnzz.com/z_stat.php?id=1273786907&web_id=1273786907' },
     ]
   },
   /*
