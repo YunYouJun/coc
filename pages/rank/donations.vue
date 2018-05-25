@@ -17,6 +17,7 @@ export default {
       clans: [
         '#28VPJVGC',  // 琦开得胜
         '#LLP0GYCU',  // 机智一族
+        // '#CVP9VJUL',  // 开荒
       ],
       clanInfo: '',
       clanMembersInfo: []
@@ -50,6 +51,7 @@ export default {
       let self = this
       return this.$axios.get('api/players/' + utils.tagify(playerTag))
       .then(function(res){
+        res.data.friendInNeed = res.data.achievements[14].value
         return res.data
       })
       .catch(function(e){

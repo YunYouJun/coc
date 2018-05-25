@@ -60,15 +60,15 @@
           </template>
       </el-table-column>
 
-      <el-table-column 
-      prop="achievements"
+      <!-- <el-table-column 
+      prop="achievements[14].value"
       label="Friend In Need"
       sortable
-      >
-        <template slot-scope="scope">
+      > -->
+        <!-- <template slot-scope="scope">
           {{ scope.row.achievements[14].value }}
-        </template>
-      </el-table-column>
+        </template> -->
+      <!-- </el-table-column> -->
 
     </el-table>
   </div>
@@ -132,11 +132,22 @@ export default {
           label: '收兵数',
           // width: 100,
           sortable: true
+        }, 
+        {
+          prop: 'friendInNeed',
+          label: 'Friend In Need',
+          sortable: true
         }
       ]
     }
   },
   methods: {
+    sortMethod (a, b) {
+      console.log(a, b)
+
+      if (a.achievements[14].value > b.achievements[14].value)
+      return a
+    },
     roleType (role) {
       let type = 'info'
       switch (role) {
