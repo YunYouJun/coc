@@ -1,6 +1,9 @@
 const pkg = require('./package')
 
 module.exports = {
+  router: {
+
+  },
   /*
   ** Headers of the page
   */
@@ -37,7 +40,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: 'black' },
   /*
   ** Build configuration
   */
@@ -56,6 +59,9 @@ module.exports = {
         })
       }
     }
+  },
+  generate: {
+    routes: ['/', '/en']
   },
   modules: [
     '@nuxtjs/axios',

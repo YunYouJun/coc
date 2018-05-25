@@ -1,0 +1,25 @@
+{
+  "home": {
+    "title": "Welcome",
+    "introduction": "COC Info Web"
+  },
+  "links": {
+    "home": "Home",
+    "about": "About",
+    "english": "English version",
+    "french": "French version"
+  },
+  "player": {
+    "name": "Name",
+    "role": {
+      "leader": "Leader",
+      "coLeader": "Co-leader",
+      "admin": "Elder",
+      "member": "Member"
+    }
+  },
+  "about": {
+    "title": "About",
+    "introduction": "This page is made to give you more informations."
+  }
+}

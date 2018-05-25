@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-table
-      :data="memberList"
+      :data="clanMembersInfo"
       stripe
       show-summary
       highlight-current-row
@@ -52,14 +52,22 @@
               :type="roleType(scope.row.role)"
               >{{ $t('player.role.' + scope.row.role) }}</el-tag>
             <template v-else-if="item.prop==='name'">
-              <img class="league-icon" :src="scope.row.league.iconUrls.tiny">
-              &nbsp;
               <span>{{ scope.row[item.prop] }}</span>
             </template>
             <template v-else>
               {{ scope.row[item.prop] }}
             </template>
           </template>
+      </el-table-column>
+
+      <el-table-column 
+      prop="achievements"
+      label="Friend In Need"
+      sortable
+      >
+        <template slot-scope="scope">
+          {{ scope.row.achievements[14].value }}
+        </template>
       </el-table-column>
 
     </el-table>
@@ -69,7 +77,7 @@
 <script>
 export default {
   name: 'ClanMember',
-  props: ['memberList'],
+  props: ['clanMembersInfo'],
   data () {
     return {
       member: [
@@ -108,6 +116,12 @@ export default {
         //   // width: 100,
         //   sortable: true
         // },
+        {
+          prop: 'warStars',
+          label: '战争星数',
+          // width: 100,
+          sortable: true
+        },
         {
           prop: 'donations',
           label: '捐兵数',
@@ -174,9 +188,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.league-icon {
-  width: 24px;
-  cursor: pointer;
-  vertical-align: -7px!important;
-}
+
 </style>

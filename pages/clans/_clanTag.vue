@@ -1,10 +1,8 @@
 <template>
   <div>
-    <el-card>
-      <template v-if="clanInfo">
-        <clan-member :memberList="clanInfo.memberList"></clan-member>
-      </template>
-    </el-card>
+    <template v-if="clanInfo">
+      <clan-member :memberList="clanInfo.memberList"></clan-member>
+    </template>
   </div>
 </template>
 

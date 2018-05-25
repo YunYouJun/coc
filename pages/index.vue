@@ -4,9 +4,12 @@
 
       <app-logo/>
 
-      <h2 class="title">
-        {{ title }}
+      <h2>
+        {{ $t('home.title') }}
       </h2>
+      <h5>
+        {{ $t('home.introduction') }}
+      </h5>
 
       <el-row :gutter="20">
         <el-col :xs="{span:24}" :md="{span:4, offset:8}">

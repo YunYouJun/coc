@@ -1,13 +1,13 @@
 <template>
   <div>
-    <el-card>
+    <el-card shadow="hover">
       <el-input placeholder="请输入玩家标签" v-model="playerTag" @keyup.enter.native="getPlayerInfoByTag(playerTag)">
         <template slot="prepend">玩家标签</template>
         <el-button slot="append" icon="el-icon-search" @click="getPlayerInfoByTag(playerTag)"></el-button>
       </el-input>
     </el-card>
     <hr>
-    <el-card>
+    <el-card shadow="hover">
       <template v-if="playerInfo">
         <display-data :data="playerInfo"></display-data>
       </template>
@@ -53,6 +53,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.el-card {
+  overflow: auto;
+}
 </style>

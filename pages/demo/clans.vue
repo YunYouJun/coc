@@ -57,7 +57,6 @@ export default {
         return res.data
       })
       .catch(function(e){
-        console.log(e)
         if (e.response.data) {
           self.$message({
             showClose: true,
@@ -74,5 +73,9 @@ export default {
 <style scoped>
 .el-select {
   width: 130px;
+}
+
+.el-card {
+  overflow: auto;
 }
 </style>

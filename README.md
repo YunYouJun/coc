@@ -17,6 +17,7 @@ Use Coc API to display and analyze
 ## Function
 
 - DEMO (use prism to highlight)
+- i18n
 
 ## Build Setup
 

@@ -1,0 +1,25 @@
+{
+  "home": {
+    "title": "COC",
+    "introduction": "COC 信息网站"
+  },
+  "links": {
+    "home": "Home",
+    "about": "About",
+    "english": "English version",
+    "french": "French version"
+  },
+  "player": {
+    "name": "昵称",
+    "role": {
+      "leader": "首领",
+      "coLeader": "副首领",
+      "admin": "长老",
+      "member": "成员"
+    }
+  },
+  "about": {
+    "title": "About",
+    "introduction": "This page is made to give you more informations."
+  }
+}
