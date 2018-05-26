@@ -12,11 +12,9 @@ import FriendInNeed from '~/components/rank/FriendInNeed'
 export default {
   data () {
     return {
-      // clanTag: '#28VPJVGC',
-      // clanTag: '#CVP9VJUL',
-      clans: [
+      clanTags: [
         '#28VPJVGC',  // 琦开得胜
-        '#LLP0GYCU',  // 机智一族
+        // '#LLP0GYCU',  // 机智一族
         // '#CVP9VJUL',  // 开荒
       ],
       clanInfo: '',
@@ -40,7 +38,7 @@ export default {
         if (e.response.data) {
           self.$message({
             showClose: true,
-            message: e.response.data.reason,
+            message: self.$t('reason.' + e.response.data.reason),
             type: 'error'
           })
         }
@@ -51,7 +49,7 @@ export default {
       let self = this
       return this.$axios.get('api/players/' + utils.tagify(playerTag))
       .then(function(res){
-        res.data.friendInNeed = res.data.achievements[14].value
+        res.data.friendInNeed = res.data.achievements[14].value //  friend in need
         return res.data
       })
       .catch(function(e){
@@ -59,15 +57,19 @@ export default {
       })
     },
     async getClanMembersInfo (clanTag) {
+      let self = this
       let memberList = await this.getClanMemberListByTag(clanTag)
       for (let i = 0; i < memberList.items.length; i++) {
-        let memberInfo = await this.getPlayerInfoByTag(memberList.items[i].tag)
-        this.clanMembersInfo = this.clanMembersInfo.concat(memberInfo)
+        this.getPlayerInfoByTag(memberList.items[i].tag)
+          .then(function(res){
+            let memberInfo = res
+            self.clanMembersInfo = self.clanMembersInfo.concat(memberInfo)
+          })
       }
     },
     async getAllClanMembersInfo () {
-      for (let i = 0; i < this.clans.length; i++) {
-        this.getClanMembersInfo(this.clans[i])       
+      for (let i = 0; i < this.clanTags.length; i++) {
+        this.getClanMembersInfo(this.clanTags[i])       
       }
     }
   }

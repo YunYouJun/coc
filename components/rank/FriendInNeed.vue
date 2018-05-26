@@ -6,6 +6,7 @@
       show-summary
       highlight-current-row
       :summary-method="getSummaries"
+      :default-sort="{prop: 'friendInNeed', order: 'descending'}"
       style="width: 100%">
 
       <el-table-column
@@ -135,7 +136,7 @@ export default {
         }, 
         {
           prop: 'friendInNeed',
-          label: 'Friend In Need',
+          label: this.$t('player.achievements.friendInNeed'),
           sortable: true
         }
       ]

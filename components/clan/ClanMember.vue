@@ -6,6 +6,7 @@
       show-summary
       highlight-current-row
       :summary-method="getSummaries"
+      :default-sort="{prop: 'donations', order: 'descending'}"
       style="width: 100%">
 
       <el-table-column
@@ -22,11 +23,11 @@
                 {{ props.row.tag }}
               </el-tag>
             </el-form-item>
-            <el-form-item label="奖杯">
+            <!-- <el-form-item label="奖杯">
               <el-tag>
                 {{ props.row.trophies }}
               </el-tag>
-            </el-form-item>
+            </el-form-item> -->
             <el-form-item label="夜世界奖杯">
               <el-tag>
                 {{ props.row.versusTrophies }}
@@ -96,12 +97,12 @@ export default {
           // width: 100,
           sortable: true
         }, 
-        // {
-        //   prop: 'trophies',
-        //   label: '奖杯',
-        //   // width: 100,
-        //   sortable: true
-        // }, 
+        {
+          prop: 'trophies',
+          label: '奖杯',
+          // width: 100,
+          sortable: true
+        }, 
         // {
         //   prop: 'versusTrophies',
         //   label: '夜世界',

@@ -16,6 +16,14 @@
       "coLeader": "副首领",
       "admin": "长老",
       "member": "成员"
+    },
+    "achievements": {
+      "friendInNeed": "患难之交"
+    }
+  },
+  "reason": {
+    "accessDenied": {
+      "invalidIp": "无效的 IP 地址"
     }
   },
   "about": {
