@@ -15,6 +15,20 @@
         fixed>
       </el-table-column>
 
+      <el-table-column
+        prop="name"
+        label="昵称"
+        width="150"
+        fixed="left"
+        >
+        <template slot-scope="scope">
+          <img class="league-icon" :src="scope.row.league.iconUrls.tiny">
+          <el-button type="text" @click="goToPlayerInfo(scope.row.tag)">
+            {{ scope.row.name }}
+          </el-button>
+        </template>
+      </el-table-column>
+
       <el-table-column type="expand">
         <template slot-scope="props">
           <el-form label-position="right" label-width="120px">
@@ -42,11 +56,6 @@
             <el-tag v-if="item.prop==='role'"
               :type="roleType(scope.row.role)"
               >{{ $t('player.role.' + scope.row.role) }}</el-tag>
-            <template v-else-if="item.prop==='name'">
-              <img class="league-icon" :src="scope.row.league.iconUrls.tiny">
-              &nbsp;
-              <span>{{ scope.row[item.prop] }}</span>
-            </template>
             <template v-else>
               {{ scope.row[item.prop] }}
             </template>
@@ -64,12 +73,13 @@ export default {
   data () {
     return {
       member: [
+        // {
+        //   prop: 'name',
+        //   label: '昵称',
+        //   width: 150,
+        //   fixed: 'left'
+        // }, 
         {
-          prop: 'name',
-          label: '昵称',
-          width: 150,
-          fixed: 'left'
-        }, {
           prop: 'role',
           label: '职位',
           // width: 100,
@@ -115,6 +125,9 @@ export default {
     }
   },
   methods: {
+    goToPlayerInfo (playerTag) {
+      this.$router.push({path: '/players/' + playerTag.replace('#', '')})
+    },
     roleType (role) {
       let type = 'info'
       switch (role) {

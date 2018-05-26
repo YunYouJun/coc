@@ -2,6 +2,19 @@
   <div class="text-center">
     <img src="~/assets/img/gear.png" width="300">
     <h1> API Test </h1>
+
+    <el-row :gutter="20">
+      <el-col :xs="{span:24}" :md="{span:4, offset:8}">
+        <nuxt-link to="/demo/clans">
+          <el-button type="primary" plain>clans</el-button>
+        </nuxt-link>
+      </el-col>
+      <el-col :xs="{span:24}" :md="{span:4}">
+        <nuxt-link to="/demo/players">
+          <el-button type="info" plain>players</el-button>
+        </nuxt-link>
+      </el-col>
+    </el-row>
   </div>
 </template>
 

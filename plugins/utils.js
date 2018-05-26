@@ -8,5 +8,5 @@ function tagify (tag) {
 }
 
 export default {
-  tagify
+  tagify,
 }

@@ -37,6 +37,7 @@ export default {
   },
   methods: {
     getPlayerInfoByTag (playerTag) {
+      if (!playerTag) return
       let self = this
       return this.$axios.get('api/players/' + utils.tagify(playerTag))
       .then(function(res){

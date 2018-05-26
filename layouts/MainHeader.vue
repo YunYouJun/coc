@@ -81,20 +81,20 @@ export default {
             }
           ]
         },
-        {
-          name: 'DEMO',
-          path: '/demo',
-          children: [
-            {
-              name: 'clans',
-              path: '/clans'
-            },
-            {
-              name: 'players',
-              path: '/players'
-            },
-          ]
-        }
+        // {
+        //   name: 'DEMO',
+        //   path: '/demo',
+        //   children: [
+        //     {
+        //       name: 'clans',
+        //       path: '/clans'
+        //     },
+        //     {
+        //       name: 'players',
+        //       path: '/players'
+        //     },
+        //   ]
+        // }
       ]
     }
   },

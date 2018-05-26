@@ -9,7 +9,28 @@
     "english": "English version",
     "french": "French version"
   },
+  "clan": {
+    "info": "部落信息",
+    "members": "成员",
+    "type": "类型",
+    "warFrequency": "战争频率",
+    "warWins": "战争胜利",
+    "warWinStreak": "战争连胜数",
+    "location": {
+      "name": "部落位置"
+    }
+  },
+  "type": {
+    "inviteOnly": "只有被批准才能加入"
+  },
+  "warFrequency": {
+    "always": "始终"
+  },
+  "location": {
+    "International": "全球"
+  },
   "player": {
+    "info": "玩家信息",
     "name": "昵称",
     "role": {
       "leader": "首领",
@@ -22,12 +43,13 @@
     }
   },
   "reason": {
+    "notFound": "没有找到（ＴДＴ)",
     "accessDenied": {
       "invalidIp": "无效的 IP 地址"
     }
   },
   "about": {
-    "title": "About",
+    "title": "关于我们",
     "introduction": "This page is made to give you more informations."
   }
 }

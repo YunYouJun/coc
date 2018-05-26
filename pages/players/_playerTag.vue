@@ -1,25 +1,25 @@
 <template>
   <div>
-    <template v-if="clanInfo">
-      <clan-info :clanInfo="clanInfo"></clan-info>
+    <template v-if="playerInfo">
+      <player-info :playerInfo="playerInfo"></player-info>
     </template>
     <template v-else>
       <div class="text-center">
-        <h1>好像没有该部落哦~</h1>
+        <h1>好像没有该玩家哦~</h1>
       </div>
     </template>
   </div>
 </template>
 
 <script>
-import ClanInfo from '~/components/clan/ClanInfo'
+import PlayerInfo from '~/components/player/PlayerInfo'
 
 export default {
   asyncData ({ params, $axios }) {
-    return $axios.get(`api/clans/%23${params.clanTag}`)
+    return $axios.get(`api/players/%23${params.playerTag}`)
     .then((res) => {
       return {
-        clanInfo: res.data,
+        playerInfo: res.data,
       }
     })
     .catch((e) => {
@@ -34,7 +34,7 @@ export default {
     }
   },
   components: {
-    ClanInfo
+    PlayerInfo
   },
   methods: {
     

@@ -7,17 +7,20 @@
       </el-input>
     </el-card>
     <hr>
-    <el-card shadow="hover">
-      <template v-if="clanInfo">
-        <clan-member :memberList="clanInfo.memberList"></clan-member>
-      </template>
-    </el-card>
+    <template v-if="clanInfo">
+      <clan-info :clanInfo="clanInfo"></clan-info>
+    </template>
+    <template v-else>
+      <div class="text-center">
+        输入部落标签进行搜索~
+      </div>
+    </template>
   </div>
 </template>
 
 <script>
 import utils from '~/plugins/utils'
-import ClanMember from '~/components/clan/ClanMember'
+import ClanInfo from '~/components/clan/ClanInfo'
 
 export default {
   data () {
@@ -27,10 +30,11 @@ export default {
     }
   },
   components: {
-    ClanMember
+    ClanInfo
   },
   methods: {
     getClanInfoByTag (clanTag) {
+      if (!clanTag) return
       let self = this
       return this.$axios.get('api/clans/' + utils.tagify(clanTag))
       .then(function(res){
@@ -41,7 +45,7 @@ export default {
         if (e.response.data) {
           self.$message({
             showClose: true,
-            message: e.response.data.reason,
+            message: self.$t('reason.' + e.response.data.reason),
             type: 'error'
           })
         }

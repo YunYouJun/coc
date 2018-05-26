@@ -1,6 +1,6 @@
 {
   "home": {
-    "title": "Welcome",
+    "title": "Welcome To Coc",
     "introduction": "COC Info Web"
   },
   "links": {
@@ -9,6 +9,9 @@
     "english": "English version",
     "french": "French version"
   },
+  "clan": {
+    "info": "Clan Info"
+  },
   "player": {
     "name": "Name",
     "role": {
@@ -16,10 +19,18 @@
       "coLeader": "Co-leader",
       "admin": "Elder",
       "member": "Member"
+    },
+    "achievements": {
+      "friendInNeed": "Friend In Need"
+    }
+  },
+  "reason": {
+    "accessDenied": {
+      "invalidIp": "Invalid IP"
     }
   },
   "about": {
-    "title": "About",
+    "title": "About Us",
     "introduction": "This page is made to give you more informations."
   }
 }

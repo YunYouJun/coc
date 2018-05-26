@@ -32,7 +32,7 @@ Use Coc API to display and analyze
 
 ``` bash
 # clone project
-git clone https://github.com/YunYouJun/coc
+$ git clone https://github.com/YunYouJun/coc
 
 # install dependencies
 $ yarn # Or npm install

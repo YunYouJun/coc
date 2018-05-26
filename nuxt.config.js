@@ -35,7 +35,8 @@ module.exports = {
   ],
   plugins: [
     '~/plugins/axios',
-    { src: '~/plugins/element-ui', ssr: true }
+    { src: '~/plugins/element-ui', ssr: true },
+    { src: '~/plugins/utils.js', ssr: false }
   ],
   /*
   ** Customize the progress bar color
@@ -61,7 +62,7 @@ module.exports = {
     }
   },
   generate: {
-    routes: ['/', '/en']
+    routes: ['/', '/clans/28VPJVGC', '/clans/LLP0GYCU']
   },
   modules: [
     '@nuxtjs/axios',
