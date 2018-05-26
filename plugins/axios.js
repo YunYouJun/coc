@@ -1,7 +1,7 @@
 import env from '../env'
 
 let TOKEN = 'COC_API_TOKEN'
-TOKEN = process.env.NODE_ENV === 'production' ? process.env.PROD_TOKEN : env.LOCAL_TOKEN
+TOKEN = process.env.NODE_ENV === 'production' ? env.PROD_TOKEN : env.LOCAL_TOKEN
 
 export default function ({ $axios, redirect }) {
   $axios.setToken(TOKEN, 'Bearer')

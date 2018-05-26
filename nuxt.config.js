@@ -21,7 +21,7 @@ module.exports = {
     ],
     script: [
       // 腾讯统计
-      { src: 'http://tajs.qq.com/stats?sId=65859583' },
+      { src: 'https://tajs.qq.com/stats?sId=65859583' },
     ]
   },
   /*
