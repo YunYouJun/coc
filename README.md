@@ -8,6 +8,10 @@
 
 Use Coc API to display and analyze
 
+[Online](https://coc.yunyoujun.cn)
+
+线上可直接访问 <https://coc.yunyoujun.cn>
+
 ## Base
 
 - [Clash Of Clans API](https://developer.clashofclans.com)
@@ -17,13 +21,21 @@ Use Coc API to display and analyze
 ## Function
 
 - DEMO (use prism to highlight)
-- i18n
+- i18n (use element & vue-i18n)
 
 ## Build Setup
 
+若想要本地使用，请自行前往 [Clash Of Clans API](https://developer.clashofclans.com) 申请您 IP 地址对应的 TOKEN 。
+并参考 `env.js` 配置于其中。
+
+此处默认您了解 `git` 与 `npm`/`yarn` 命令行的基本使用。（若不了解，请参考其他教程。）
+
 ``` bash
+# clone project
+git clone https://github.com/YunYouJun/coc
+
 # install dependencies
-$ npm install # Or yarn install
+$ yarn # Or npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -31,9 +43,6 @@ $ npm run dev
 # build for production and launch server
 $ npm run build
 $ npm start
-
-# generate static project
-$ npm run generate
 ```
 
 ## BackUp

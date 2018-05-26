@@ -18,19 +18,9 @@
       <el-table-column type="expand">
         <template slot-scope="props">
           <el-form label-position="right" label-width="120px">
-            <el-form-item label="标签">
+            <el-form-item v-for="(item, key) in expandInfo" :key="key" :label="item.label">
               <el-tag>
-                {{ props.row.tag }}
-              </el-tag>
-            </el-form-item>
-            <!-- <el-form-item label="奖杯">
-              <el-tag>
-                {{ props.row.trophies }}
-              </el-tag>
-            </el-form-item> -->
-            <el-form-item label="夜世界奖杯">
-              <el-tag>
-                {{ props.row.versusTrophies }}
+                {{ props.row[item.prop] }}
               </el-tag>
             </el-form-item>
           </el-form>
@@ -74,11 +64,6 @@ export default {
   data () {
     return {
       member: [
-        // {
-        //   prop: 'tag',
-        //   label: '标签',
-        //   width: 120
-        // },
         {
           prop: 'name',
           label: '昵称',
@@ -103,12 +88,12 @@ export default {
           // width: 100,
           sortable: true
         }, 
-        // {
-        //   prop: 'versusTrophies',
-        //   label: '夜世界',
-        //   // width: 100,
-        //   sortable: true
-        // },
+        {
+          prop: 'versusTrophies',
+          label: '夜世界',
+          // width: 100,
+          sortable: true
+        },
         {
           prop: 'donations',
           label: '捐兵数',
@@ -120,6 +105,12 @@ export default {
           // width: 100,
           sortable: true
         }
+      ],
+      expandInfo: [
+        {
+            prop: 'tag',
+            label: '标签',
+        },
       ]
     }
   },
