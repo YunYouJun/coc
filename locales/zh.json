@@ -4,10 +4,18 @@
     "introduction": "COC 信息网站"
   },
   "links": {
-    "home": "Home",
-    "about": "About",
-    "english": "English version",
-    "french": "French version"
+    "clan": {
+      "index": "部落",
+      "search": "搜索",
+      "qikai": "琦开得胜",
+      "jizhi": "机智一族",
+      "we": "琦开得胜&机智一族"
+    },
+    "player": "玩家",
+    "rank": {
+      "list": "排行榜"
+    },
+    "about": "About"
   },
   "clan": {
     "info": "部落信息",
@@ -32,6 +40,12 @@
   "player": {
     "info": "玩家信息",
     "name": "昵称",
+    "warStars": "赢得的胜利之星",
+    "bestTrophies": "历来最佳",
+    "donations": "近期增援",
+    "donationsReceived": "近期收到",
+    "attackWins": "攻击获胜",
+    "defenseWins": "成功防御",
     "role": {
       "leader": "首领",
       "coLeader": "副首领",

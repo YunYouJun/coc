@@ -8,15 +8,15 @@
 
       <template v-if="!menuItem.children">
         <el-menu-item :key="key" :index="menuItem.path">
-          {{ menuItem.name }}
+          {{ $t('links.' + menuItem.name) }}
         </el-menu-item>
       </template>
 
       <template v-else>
         <el-submenu :key="key" :index="menuItem.path">
-          <template slot="title">{{ menuItem.name }}</template>
+          <template slot="title">{{ $t('links.' + menuItem.name + '.index') }}</template>
           <el-menu-item v-for="(child, key) in menuItem.children" :key="key" :index="menuItem.path + child.path">
-            {{ child.name }}
+            {{ $t('links.' + menuItem.name + '.' + child.name) }}
           </el-menu-item>
         </el-submenu>
       </template>
@@ -46,40 +46,40 @@ export default {
         //   path: '/',
         // },
         {
-          name: '部落',
+          name: 'clan',
           path: '/clans',
           children: [
             {
-              name: '搜索',
+              name: 'search',
               path: '/'
             },
             {
-              name: '琦开得胜',
+              name: 'qikai',
               path: '/28VPJVGC'
             },
             {
-              name: '机智一族',
+              name: 'jizhi',
               path: '/LLP0GYCU'
             },
             {
-              name: '琦开得胜&机智一族',
+              name: 'we',
               path: '/we'
             }
           ]
         },
         {
-          name: '玩家',
+          name: 'player',
           path: '/players'
         },
         {
-          name: '排行榜',
+          name: 'rank.list',
           path: '/rank',
-          children: [
-            {
-              name: '历史捐兵',
-              path: '/donations'
-            }
-          ]
+          // children: [
+          //   {
+          //     name: '历史捐兵',
+          //     path: '/donations'
+          //   }
+          // ]
         },
         // {
         //   name: 'DEMO',

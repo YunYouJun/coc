@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="text-center">历史捐兵排行榜</h3>
+    <h3 class="text-center">详细信息排行榜</h3>
     <friend-in-need :clanMembersInfo="clanMembersInfo"></friend-in-need>
   </div>
 </template>

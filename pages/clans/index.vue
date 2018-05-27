@@ -1,11 +1,9 @@
 <template>
   <div>
-    <el-card shadow="hover">
-      <el-input placeholder="请输入内容" v-model="clanTag" @keyup.enter.native="getClanInfoByTag(clanTag)">
-        <template slot="prepend">部落标签</template>
-        <el-button slot="append" icon="el-icon-search" @click="getClanInfoByTag(clanTag)"></el-button>
-      </el-input>
-    </el-card>
+    <el-input placeholder="请输入内容" v-model="clanTag" @keyup.enter.native="getClanInfoByTag(clanTag)">
+      <template slot="prepend">部落标签</template>
+      <el-button slot="append" icon="el-icon-search" @click="getClanInfoByTag(clanTag)"></el-button>
+    </el-input>
     <hr>
     <template v-if="clanInfo">
       <clan-info :clanInfo="clanInfo"></clan-info>

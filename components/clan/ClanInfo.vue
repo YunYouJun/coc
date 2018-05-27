@@ -2,22 +2,30 @@
   <div>
     <el-card shadow="hover">
       <el-row :gutter="20">
-        <el-col class="text-center" :md="{ span:4 }">
-          <img :src="clanInfo.badgeUrls.small">
+        <el-col class="text-center vertical-center" :md="{ span:4 }">
+          <img class="" :src="clanInfo.badgeUrls.small">
+          <hr>
+          <el-tag>
+            {{ clanInfo.name }}
+          </el-tag>
+          <br>
+          <br>
+          <el-tag type="info">
+            {{ clanInfo.tag }}
+          </el-tag>
+          <br><br>
+          <el-tag type="success">
+            {{ clanInfo.members }} / 50
+          </el-tag>
         </el-col>
         <el-col :md="{ span:12 }">
           <el-collapse accordion>
-            <el-collapse-item name="name">
+            <el-collapse-item name="trophies">
               <template slot="title">
-                <span> {{ clanInfo.name }} </span>
-                <span class="right-info">{{ clanInfo.tag }}</span>
-              </template>
-              <div>
                 <span> {{ clanInfo.clanPoints }} <i class="fas fa-trophy"></i> </span>
                 <span class="right-info">{{ clanInfo.clanVersusPoints }} <i class="fas fa-trophy"></i> </span>
                 <span> {{ clanInfo.requiredTrophies }} <i class="fas fa-trophy"></i> </span>
-                <!-- <span class="right-info">{{ clanInfo.clanVersusPoints }} <i class="fas fa-trophy"></i> </span> -->
-              </div>
+              </template>
             </el-collapse-item>
             <el-collapse-item v-for="infoItem in infoItems" :key="infoItem.name" :name="infoItem.name">
               <template slot="title">
@@ -71,9 +79,9 @@ export default {
         {
           name: 'warWinStreak'
         },
-        {
-          name: 'members'
-        },
+        // {
+        //   name: 'members'
+        // },
       ],
       enInfoItems: [
         {
@@ -95,5 +103,8 @@ export default {
 .right-info {
   float: right;
   padding-right: 10px; 
+}
+.vertical-center {
+
 }
 </style>

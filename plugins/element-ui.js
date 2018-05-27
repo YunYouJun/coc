@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Element from 'element-ui'
 
+import Cookies from 'js-cookie'
+
 import VueI18n from 'vue-i18n'
 import enLocale from 'element-ui/lib/locale/lang/en'
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
@@ -19,7 +21,7 @@ const messages = {
 
 export default ({ app, store }) => {
   app.i18n = new VueI18n({
-    locale: store.state.locale,
+    locale: Cookies.get('locale') || store.state.locale,
     fallbackLocale: 'zh',
     messages
   })

@@ -1,20 +1,16 @@
 <template>
   <div>
-    <el-card shadow="hover">
-      <el-input placeholder="请输入玩家标签" v-model="playerTag" @keyup.enter.native="getPlayerInfoByTag(playerTag)">
-        <template slot="prepend">玩家标签</template>
-        <el-button slot="append" icon="el-icon-search" @click="getPlayerInfoByTag(playerTag)"></el-button>
-      </el-input>
-    </el-card>
+    <el-input placeholder="请输入玩家标签" v-model="playerTag" @keyup.enter.native="getPlayerInfoByTag(playerTag)">
+      <template slot="prepend">玩家标签</template>
+      <el-button slot="append" icon="el-icon-search" @click="getPlayerInfoByTag(playerTag)"></el-button>
+    </el-input>
     <hr>
-    <el-card shadow="hover">
-      <template v-if="playerInfo">
-        <player-info :playerInfo="playerInfo"></player-info>
-      </template>
-      <template v-else>
+    <template v-if="playerInfo">
+      <player-info :playerInfo="playerInfo"></player-info>
+    </template>
+    <template v-else>
 
-      </template>
-    </el-card>
+    </template>
   </div>
 </template>
 

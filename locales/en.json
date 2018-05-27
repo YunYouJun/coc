@@ -4,16 +4,34 @@
     "introduction": "COC Info Web"
   },
   "links": {
-    "home": "Home",
-    "about": "About",
-    "english": "English version",
-    "french": "French version"
+    "clan": {
+      "index": "Clan",
+      "search": "Search",
+      "qikai": "琦开得胜",
+      "jizhi": "机智一族",
+      "we": "琦开得胜&机智一族"
+    },
+    "qikai": "琦开得胜",
+    "jizhi": "机智一族",
+    "we": "琦开得胜&机智一族",
+    "player": "Player",
+    "rank": {
+      "list": "Rank"
+    },
+    "about": "About"
   },
   "clan": {
     "info": "Clan Info"
   },
   "player": {
+    "info": "Player Info",
     "name": "Name",
+    "warStars": "War Stars",
+    "bestTrophies": "Best Trophies",
+    "donations": "Donations",
+    "donationsReceived": "Donations Received",
+    "attackWins": "Attack Wins",
+    "defenseWins": "Defense Wins",
     "role": {
       "leader": "Leader",
       "coLeader": "Co-leader",
