@@ -26,6 +26,7 @@
   "player": {
     "info": "Player Info",
     "name": "Name",
+    "tag": "Tag",
     "warStars": "War Stars",
     "bestTrophies": "Best Trophies",
     "donations": "Donations",

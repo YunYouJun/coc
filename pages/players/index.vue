@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-input placeholder="请输入玩家标签" v-model="playerTag" @keyup.enter.native="getPlayerInfoByTag(playerTag)">
-      <template slot="prepend">玩家标签</template>
+      <template slot="prepend">{{ $t('player.tag') }}</template>
       <el-button slot="append" icon="el-icon-search" @click="getPlayerInfoByTag(playerTag)"></el-button>
     </el-input>
     <hr>
@@ -9,7 +9,9 @@
       <player-info :playerInfo="playerInfo"></player-info>
     </template>
     <template v-else>
-
+      <div class="text-center">
+        输入玩家标签进行搜索~
+      </div>
     </template>
   </div>
 </template>

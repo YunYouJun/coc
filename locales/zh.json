@@ -40,6 +40,7 @@
   "player": {
     "info": "玩家信息",
     "name": "昵称",
+    "tag": "玩家标签",
     "warStars": "赢得的胜利之星",
     "bestTrophies": "历来最佳",
     "donations": "近期增援",
