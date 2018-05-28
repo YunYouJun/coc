@@ -1,28 +1,28 @@
 <template>
   <div>
     <h3 class="text-center">详细信息排行榜</h3>
-    <friend-in-need :clanMembersInfo="clanMembersInfo"></friend-in-need>
+    <more-info :clanMembersInfo="clanMembersInfo"></more-info>
   </div>
 </template>
 
 <script>
 import utils from '~/plugins/utils'
-import FriendInNeed from '~/components/rank/FriendInNeed'
+import MoreInfo from '~/components/rank/MoreInfo'
 
 export default {
   data () {
     return {
       clanTags: [
         '#28VPJVGC',  // 琦开得胜
-        // '#LLP0GYCU',  // 机智一族
-        // '#CVP9VJUL',  // 开荒
+        '#LLP0GYCU',  // 机智一族
+        '#CVP9VJUL',  // 开荒
       ],
       clanInfo: '',
       clanMembersInfo: []
     }
   },
   components: {
-    FriendInNeed
+    MoreInfo
   },
   mounted () {
     this.getAllClanMembersInfo()
@@ -50,6 +50,7 @@ export default {
       return this.$axios.get('api/players/' + utils.tagify(playerTag))
       .then(function(res){
         res.data.friendInNeed = res.data.achievements[14].value //  friend in need
+        res.data.sharingIsCaring = res.data.achievements[23].value //  friend in need
         return res.data
       })
       .catch(function(e){

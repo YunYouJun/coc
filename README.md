@@ -23,6 +23,10 @@ Use Coc API to display and analyze
 - DEMO (use prism to highlight)
 - i18n (use element & vue-i18n)
 
+## Intend
+
+- 使用 [qqbot](https://github.com/pandolia/qqbot)， 实现群内部落战提醒
+
 ## Build Setup
 
 若想要本地使用，请自行前往 [Clash Of Clans API](https://developer.clashofclans.com) 申请您 IP 地址对应的 TOKEN 。

@@ -178,9 +178,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.league-icon {
-  width: 24px;
-  cursor: pointer;
-  vertical-align: -7px!important;
-}
+
 </style>

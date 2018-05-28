@@ -14,6 +14,22 @@
         fixed>
       </el-table-column>
 
+      <el-table-column
+        prop="name"
+        label="昵称"
+        width="150"
+        fixed="left"
+        >
+        <template slot-scope="scope">
+          <template v-if="scope.row.league">
+            <img class="league-icon" :src="scope.row.league.iconUrls.tiny">
+          </template>
+          <el-button type="text" @click="goToPlayerInfo(scope.row.tag)">
+            {{ scope.row.name }}
+          </el-button>
+        </template>
+      </el-table-column>
+
       <el-table-column type="expand">
         <template slot-scope="props">
           <el-form label-position="right" label-width="120px">
@@ -51,9 +67,6 @@
             <el-tag v-if="item.prop==='role'"
               :type="roleType(scope.row.role)"
               >{{ $t('player.role.' + scope.row.role) }}</el-tag>
-            <template v-else-if="item.prop==='name'">
-              <span>{{ scope.row[item.prop] }}</span>
-            </template>
             <template v-else>
               {{ scope.row[item.prop] }}
             </template>
@@ -86,12 +99,13 @@ export default {
         //   label: '标签',
         //   width: 120
         // },
+        // {
+        //   prop: 'name',
+        //   label: '昵称',
+        //   width: 150,
+        //   fixed: 'left'
+        // }, 
         {
-          prop: 'name',
-          label: '昵称',
-          width: 150,
-          fixed: 'left'
-        }, {
           prop: 'role',
           label: '职位',
           // width: 100,
@@ -137,11 +151,24 @@ export default {
           prop: 'friendInNeed',
           label: this.$t('player.achievements.friendInNeed'),
           sortable: true
+        },
+        {
+          prop: 'sharingIsCaring',
+          label: this.$t('player.achievements.sharingIsCaring'),
+          sortable: true
+        },
+        {
+          prop: 'attackWins',
+          label: '攻击获胜',
+          sortable: true
         }
       ]
     }
   },
   methods: {
+    goToPlayerInfo (playerTag) {
+      this.$router.push({path: '/players/' + playerTag.replace('#', '')})
+    },
     sortMethod (a, b) {
       console.log(a, b)
 
@@ -175,6 +202,8 @@ export default {
       columns.forEach((column, index) => {
         if (index === 0) {
           sums[index] = 'All'
+          return;
+        } else if (index === 2) {
           return;
         }
         const values = data.map(item => Number(item[column.property]))
