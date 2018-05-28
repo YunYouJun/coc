@@ -11,7 +11,6 @@
 
       <el-table-column
         type="index"
-        width="40"
         fixed>
       </el-table-column>
 

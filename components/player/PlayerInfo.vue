@@ -2,28 +2,47 @@
   <div>
     <el-card shadow="hover">
       <el-row :gutter="20">
-        <el-col :span="12">
+        <el-col :span="12" class="player-basic-info">
           <el-tag>{{ playerInfo.expLevel }}</el-tag>
           <el-tag type="dark">{{ playerInfo.name }}</el-tag>
-          <el-tag type="info">{{ playerInfo.tag }}</el-tag>
+          <!-- <el-tag type="info"> -->
+            {{ playerInfo.tag }}
+          <!-- </el-tag> -->
           <hr>
-          <nuxt-link :to="'/clans/' + playerInfo.clan.tag.replace('#', '')">
             <el-row>
-              <el-col :span="6" class="text-center">
-                <img :src="playerInfo.clan.badgeUrls.small">
-              </el-col>
-              <el-col :span="6">
-                <el-tag type="success">{{ playerInfo.clan.name }}</el-tag>
+              <nuxt-link :to="'/clans/' + playerInfo.clan.tag.replace('#', '')">
+                <el-col :xs="{span:12}" :md="{span:6}" class="text-center">
+                  <img :src="playerInfo.clan.badgeUrls.small">
+                </el-col>
+                <el-col :xs="{span:12}" :md="{span:6}">
+                  <el-tag type="success">{{ playerInfo.clan.name }}</el-tag>
+                  <br>
+                  <el-tag type="success">{{ $t('player.role.' + playerInfo.role) }}</el-tag>
+                </el-col>
+              </nuxt-link>
+              <el-col span="12">
+                <el-tooltip effect="dark" :content="playerInfo.achievements[14].info" placement="top">
+                  <div>
+                    {{ $t('player.achievements.friendInNeed') }}
+                    :
+                    {{ playerInfo.achievements[14].value }}
+                  </div>
+                </el-tooltip>
                 <br>
-                <br>
-                <el-tag type="success">{{ playerInfo.role }}</el-tag>
+                <el-tooltip effect="dark" :content="playerInfo.achievements[23].info" placement="bottom">
+                  <div>
+                    {{ $t('player.achievements.sharingIsCaring') }}
+                    :
+                    {{ playerInfo.achievements[23].value }}
+                  </div>
+                </el-tooltip>
               </el-col>
             </el-row>
-          </nuxt-link>
         </el-col>
+
         <el-col :span="12">
-          <el-row>
-            <el-col :span="12" class="text-center">
+          <el-row class="text-center">
+            <el-col :span="12">
               <img :src="playerInfo.league.iconUrls.small">
             </el-col>
             <el-col :span="12">
@@ -35,22 +54,26 @@
           </el-row>
           <hr>
           <el-row :gutter="20">
-            <el-col :span="12">
+            <el-col :xs="{span:24}" :md="{span:12}">
+              <div style="margin: 10px;">
               {{ $t('player.warStars') }}
               ：
               {{ playerInfo.warStars }}
+              </div>
             </el-col>
-            <el-col :span="12">
+            <el-col :xs="{span:24}" :md="{span:12}">
+              <div style="margin: 10px;">
               {{ $t('player.bestTrophies') }}
               ：
               {{ playerInfo.bestTrophies }}
+              </div>
             </el-col>
           </el-row>
         </el-col>
       </el-row>
       <hr>
       <el-row>
-        <el-col v-for="item in recentInfo" :key="item.name" :xs="{span:12}" :sm="{span:12}" :md="{span:6}">
+        <el-col v-for="item in recentInfo" :key="item.name" :xs="{span:24}" :sm="{span:12}" :md="{span:6}">
           <el-card :body-style="{padding: '10px'}" shadow="hover" style="margin: 10px;">
             {{ $t('player.' + item.name) }} : 
             <span class="right-info">
@@ -62,8 +85,19 @@
     </el-card>
 
     <br>
+
     <el-card shadow="hover">
-      科技图
+      <el-row>
+        <el-col :md="{span:14}" :xs="{span:24}">
+          <troops-info :troops="playerInfo.troops"></troops-info>
+        </el-col>
+        <el-col :md="{span:6}" :xs="{span:24}">
+          <spells-info :spells="playerInfo.spells"></spells-info>
+        </el-col>
+        <el-col :md="{span:4}" :xs="{span:24}">
+          <heroes-info :heroes="playerInfo.heroes"></heroes-info>
+        </el-col>
+      </el-row>
     </el-card>
 
     <h4>家乡成就</h4>
@@ -113,7 +147,9 @@
 </template>
 
 <script>
-import DisplayData from '~/components/demo/DisplayData'
+import TroopsInfo from '~/components/player/TroopsInfo'
+import SpellsInfo from '~/components/player/SpellsInfo'
+import HeroesInfo from '~/components/player/HeroesInfo'
 
 export default {
   props: ['playerInfo'],
@@ -144,14 +180,16 @@ export default {
     }
   },
   components: {
-    DisplayData
+    TroopsInfo,
+    SpellsInfo,
+    HeroesInfo
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.el-tag + .el-tag {
-  margin-left: 10px;
+.player-basic-info .el-tag {
+  margin: 5px;
 }
 .right-info {
   float: right;

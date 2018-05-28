@@ -40,13 +40,19 @@
       "member": "Member"
     },
     "achievements": {
-      "friendInNeed": "Friend In Need"
+      "friendInNeed": "Friend In Need",
+      "sharingIsCaring": "Sharing is caring"
     }
   },
   "reason": {
+    "notFound": "Not Found!（ＴДＴ)",
+    "inMaintenance": "系统维护中~",
     "accessDenied": {
       "invalidIp": "Invalid IP"
     }
+  },
+  "message": {
+    "API is currently in maintenance, please come back later": "API is currently in maintenance, please come back later~"
   },
   "about": {
     "title": "About Us",

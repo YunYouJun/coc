@@ -54,14 +54,19 @@
       "member": "成员"
     },
     "achievements": {
-      "friendInNeed": "患难之交"
+      "friendInNeed": "患难之交",
+      "sharingIsCaring": "分享即关爱"
     }
   },
   "reason": {
     "notFound": "没有找到（ＴДＴ)",
+    "inMaintenance": "系统维护中~",
     "accessDenied": {
       "invalidIp": "无效的 IP 地址"
     }
+  },
+  "message": {
+    "API is currently in maintenance, please come back later": "API 正在维护中，请稍后再试吧~"
   },
   "about": {
     "title": "关于我们",
