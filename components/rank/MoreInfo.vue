@@ -117,7 +117,11 @@ export default {
           label: '等级',
           // width: 100,
           sortable: true
-        }, 
+        }, {
+          prop: 'townHallLevel',
+          label: '大本营',
+          sortable: true,
+        },
         // {
         //   prop: 'trophies',
         //   label: '奖杯',

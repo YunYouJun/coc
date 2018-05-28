@@ -25,6 +25,10 @@ Use Coc API to display and analyze
 
 ## Intend
 
+- 大本营等级图标 （playerInfo 组件）
+- PlayerInfo 拆分组件
+- 图标素材完善
+- 国际化翻译
 - 使用 [qqbot](https://github.com/pandolia/qqbot)， 实现群内部落战提醒
 
 ## Build Setup
