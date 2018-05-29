@@ -41,12 +41,13 @@
     },
     "achievements": {
       "friendInNeed": "Friend In Need",
-      "sharingIsCaring": "Sharing is caring"
+      "sharingIsCaring": "Sharing is caring",
+      "gameChampion": "Game Champion"
     }
   },
   "reason": {
     "notFound": "Not Found!（ＴДＴ)",
-    "inMaintenance": "系统维护中~",
+    "inMaintenance": "In Maintenance",
     "accessDenied": {
       "invalidIp": "Invalid IP"
     }

@@ -8,32 +8,49 @@
 
 Use Coc API to display and analyze
 
-[Online](https://coc.yunyoujun.cn)
-
-线上可直接访问 <https://coc.yunyoujun.cn>
+线上可直接访问 [Online](https://coc.yunyoujun.cn)
 
 ## Base
 
 - [Clash Of Clans API](https://developer.clashofclans.com)
 - [API Address](https://api.clashofclans.com/v1/)
+- [Fan Kit](https://forum.supercell.com/showthread.php/1548105-Updated-Fan-Kit-now-available%21)
 - [Nuxt](https://nuxtjs.org)
 
 ## Function
+
+### Main
+
+- Clan
+  - Search
+  - 琦开得胜
+  - 机智一族
+  - 琦开得胜&机智一族
+- Player
+  - Search
+- Rank
+  - MoreInfo
+
+### Other
 
 - DEMO (use prism to highlight)
 - i18n (use element & vue-i18n)
 
 ## Intend
 
+- Markdown 解析 （/about）
 - 大本营等级图标 （playerInfo 组件）
-- PlayerInfo 拆分组件
+- hamburger 菜单
+- PlayerInfo 继续拆分组件
 - 图标素材完善
 - 国际化翻译
-- 使用 [qqbot](https://github.com/pandolia/qqbot)， 实现群内部落战提醒
+- 科技值权重计算  [TechValue](docs/TechValue.md)
+- 使用 [qqbot](https://github.com/pandolia/qqbot) http API， 实现群内部落战提醒
+- donate
 
 ## Build Setup
 
-若想要本地使用，请自行前往 [Clash Of Clans API](https://developer.clashofclans.com) 申请您 IP 地址对应的 TOKEN 。
+若想要本地使用，请自行前往 [Clash Of Clans API](https://developer.clashofclans.com) 申请您 IP 地址对应的 `TOKEN` 。
 并参考 `env.js` 配置于其中。
 
 此处默认您了解 `git` 与 `npm`/`yarn` 命令行的基本使用。（若不了解，请参考其他教程。）
@@ -56,3 +73,8 @@ $ npm start
 ## BackUp
 
 - [heroku](https://coc-api.herokuapp.com) (No Token)
+
+## About
+
+此项目为兴趣之作，不作盈利目的。
+请勿恶意发送多次请求，或攻击服务器。

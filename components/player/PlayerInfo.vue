@@ -43,7 +43,9 @@
         <el-col :span="12">
           <el-row class="text-center">
             <el-col :span="12">
-              <img :src="playerInfo.league.iconUrls.small">
+              <template v-if="playerInfo.league">
+                <img :src="playerInfo.league.iconUrls.small">
+              </template>
             </el-col>
             <el-col :span="12">
               <h2>

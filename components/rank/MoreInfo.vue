@@ -73,6 +73,19 @@
           </template>
       </el-table-column>
 
+      <el-table-column
+        v-for="achievement in achievements"
+        :key="achievement.prop"
+        :width="achievement.width"
+        :fixed="achievement.fixed"
+        :filters="achievement.filters"
+        :filter-method="achievement.filterMethod"
+        :sortable="achievement.sortable"
+        :prop="achievement.prop"
+        :label="achievement.label"
+        >
+      </el-table-column>
+
       <!-- <el-table-column 
       prop="achievements[14].value"
       label="Friend In Need"
@@ -152,6 +165,19 @@ export default {
           sortable: true
         }, 
         {
+          prop: 'attackWins',
+          label: '攻击获胜',
+          sortable: true
+        },
+        
+      ],
+      achievements: [
+        {
+          prop: 'gameChampion',
+          label: this.$t('player.achievements.gameChampion'),
+          sortable: true
+        },
+        {
           prop: 'friendInNeed',
           label: this.$t('player.achievements.friendInNeed'),
           sortable: true
@@ -161,23 +187,12 @@ export default {
           label: this.$t('player.achievements.sharingIsCaring'),
           sortable: true
         },
-        {
-          prop: 'attackWins',
-          label: '攻击获胜',
-          sortable: true
-        }
       ]
     }
   },
   methods: {
     goToPlayerInfo (playerTag) {
       this.$router.push({path: '/players/' + playerTag.replace('#', '')})
-    },
-    sortMethod (a, b) {
-      console.log(a, b)
-
-      if (a.achievements[14].value > b.achievements[14].value)
-      return a
     },
     roleType (role) {
       let type = 'info'

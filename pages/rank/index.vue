@@ -50,7 +50,8 @@ export default {
       return this.$axios.get('api/players/' + utils.tagify(playerTag))
       .then(function(res){
         res.data.friendInNeed = res.data.achievements[14].value //  friend in need
-        res.data.sharingIsCaring = res.data.achievements[23].value //  friend in need
+        res.data.sharingIsCaring = res.data.achievements[23].value //  sharing is caring
+        res.data.gameChampion = res.data.achievements[31].value   //  game champion
         return res.data
       })
       .catch(function(e){

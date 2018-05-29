@@ -31,7 +31,8 @@ module.exports = {
     // 'element-ui/lib/theme-chalk/index.css'
     'element-theme-ink',
     { src: '~assets/css/coc.scss', lang: 'scss' },
-    'prismjs/themes/prism.css'
+    'prismjs/themes/prism.css',
+    '~/assets/css/github-markdown.css'
   ],
   plugins: [
     '~/plugins/axios',
@@ -59,7 +60,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    extend (config, { isDev, isClient }) {
+      config.module.rules.push({
+        test: /\.md/,
+        loader: 'vue-markdown-loader'
+      })
+    },
   },
   generate: {
     routes: ['/', '/clans/28VPJVGC', '/clans/LLP0GYCU']
