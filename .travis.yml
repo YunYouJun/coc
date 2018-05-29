@@ -12,7 +12,7 @@ addons:
     packages:
     - sshpass
 install:
-  - yarn
+  - yarn install
 script:
   - npm run build
 after_success:

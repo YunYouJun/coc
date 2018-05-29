@@ -43,7 +43,7 @@ Use Coc API to display and analyze
 - hamburger 菜单
 - PlayerInfo 继续拆分组件
 - 图标素材完善
-- 国际化翻译
+- 国际化翻译(部分)
 - 科技值权重计算  [TechValue](docs/TechValue.md)
 - 使用 [qqbot](https://github.com/pandolia/qqbot) http API， 实现群内部落战提醒
 - donate
@@ -76,5 +76,11 @@ $ npm start
 
 ## About
 
+部落QQ群: 365376497
+
+[![琦琦部落](https://pub.idqqimg.com/wpa/images/group.png)](https://shang.qq.com/wpa/qunwpa?idkey=343208cf41d8999818f1bc24b2e9ec87f9cf6d3d46613293e210a32df85d20d6)
+
+---
+
 此项目为兴趣之作，不作盈利目的。
-请勿恶意发送多次请求，或攻击服务器。
+请勿恶意频繁刷新发送多次请求。(我的小水管服务器顶不住/(ㄒ^ㄒ)/~~)
