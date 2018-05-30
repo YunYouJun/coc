@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-input placeholder="请输入内容" v-model="clanTag" @keyup.enter.native="getClanInfoByTag(clanTag)">
-      <template slot="prepend">部落标签</template>
+      <template slot="prepend">{{ $t('clan.tag') }}</template>
       <el-button slot="append" icon="el-icon-search" @click="getClanInfoByTag(clanTag)"></el-button>
     </el-input>
     <hr>

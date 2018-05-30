@@ -72,14 +72,18 @@ export default {
           path: '/players'
         },
         {
-          name: 'rank.list',
+          name: 'rank',
           path: '/rank',
-          // children: [
-          //   {
-          //     name: '历史捐兵',
-          //     path: '/donations'
-          //   }
-          // ]
+          children: [
+            {
+              name: 'search',
+              path: '/'
+            },
+            {
+              name: 'we',
+              path: '/we'
+            }
+          ]
         },
         // {
         //   name: 'DEMO',

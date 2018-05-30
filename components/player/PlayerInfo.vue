@@ -20,7 +20,7 @@
                   <el-tag type="success">{{ $t('player.role.' + playerInfo.role) }}</el-tag>
                 </el-col>
               </nuxt-link>
-              <el-col span="12">
+              <el-col :span="12">
                 <el-tooltip effect="dark" :content="playerInfo.achievements[14].info" placement="top">
                   <div>
                     {{ $t('player.achievements.friendInNeed') }}

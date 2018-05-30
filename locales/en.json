@@ -16,17 +16,37 @@
     "we": "琦开得胜&机智一族",
     "player": "Player",
     "rank": {
-      "list": "Rank"
+      "index": "Rank",
+      "search": "Search",
+      "we": "琦开得胜&机智一族"
     },
     "about": "About"
   },
   "clan": {
-    "info": "Clan Info"
+    "tag": "Clan Tag",
+    "info": "Clan Info",
+    "members": "Members",
+    "type": "Type",
+    "warFrequency": "War Frequency",
+    "warWins": "War Wins",
+    "warWinStreak": "War Win Streak",
+    "location": {
+      "name": "Location"
+    }
+  },
+  "type": {
+    "inviteOnly": "Invite Only"
+  },
+  "warFrequency": {
+    "always": "Always"
+  },
+  "location": {
+    "International": "International"
   },
   "player": {
     "info": "Player Info",
     "name": "Name",
-    "tag": "Tag",
+    "tag": "Player Tag",
     "warStars": "War Stars",
     "bestTrophies": "Best Trophies",
     "donations": "Donations",

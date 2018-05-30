@@ -86,26 +86,19 @@
         >
       </el-table-column>
 
-      <!-- <el-table-column 
-      prop="achievements[14].value"
-      label="Friend In Need"
-      sortable
-      > -->
-        <!-- <template slot-scope="scope">
-          {{ scope.row.achievements[14].value }}
-        </template> -->
-      <!-- </el-table-column> -->
-
     </el-table>
   </div>
 </template>
 
 <script>
+import utils from '~/plugins/utils'
+
 export default {
   name: 'ClanMember',
-  props: ['clanMembersInfo'],
+  props: ['clanTags'],
   data () {
     return {
+      clanMembersInfo: [],
       member: [
         // {
         //   prop: 'tag',
@@ -190,6 +183,12 @@ export default {
       ]
     }
   },
+  watch: {
+    clanTags () {
+      this.clanMembersInfo = []
+      this.getAllClanMembersInfo()
+    }
+  },
   methods: {
     goToPlayerInfo (playerTag) {
       this.$router.push({path: '/players/' + playerTag.replace('#', '')})
@@ -242,7 +241,55 @@ export default {
       sums[1] = 'N/A' // name
       return sums;
     },
-  }
+    // get info
+    getClanMemberListByTag (clanTag) {
+      let self = this
+      return this.$axios.get('api/clans/' + utils.tagify(clanTag) + '/members')
+      .then(function(res){
+        return res.data
+      })
+      .catch(function(e){
+        if (e.response.data) {
+          self.$message({
+            showClose: true,
+            message: self.$t('reason.' + e.response.data.reason),
+            type: 'error'
+          })
+        }
+        return e.response.data
+      })
+    },
+    getPlayerInfoByTag (playerTag) {
+      let self = this
+      return this.$axios.get('api/players/' + utils.tagify(playerTag))
+      .then(function(res){
+        res.data.friendInNeed = res.data.achievements[14].value //  friend in need
+        res.data.sharingIsCaring = res.data.achievements[23].value //  sharing is caring
+        res.data.gameChampion = res.data.achievements[31].value   //  game champion
+        return res.data
+      })
+      .catch(function(e){
+        return e.response.data
+      })
+    },
+    async getClanMembersInfo (clanTag) {
+      let self = this
+      let memberList = await this.getClanMemberListByTag(clanTag)
+      for (let i = 0; i < memberList.items.length; i++) {
+        this.getPlayerInfoByTag(memberList.items[i].tag)
+          .then(function(res){
+            let memberInfo = res
+            self.clanMembersInfo = self.clanMembersInfo.concat(memberInfo)
+          })
+      }
+    },
+    async getAllClanMembersInfo () {
+      console.log('get')
+      for (let i = 0; i < this.clanTags.length; i++) {
+        this.getClanMembersInfo(this.clanTags[i])       
+      }
+    }
+  },
 }
 </script>
 

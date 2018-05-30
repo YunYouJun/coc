@@ -13,11 +13,14 @@
     },
     "player": "玩家",
     "rank": {
-      "list": "排行榜"
+      "index": "排行榜",
+      "search": "搜索",
+      "we": "琦开得胜&机智一族"
     },
     "about": "About"
   },
   "clan": {
+    "tag": "部落标签",
     "info": "部落信息",
     "members": "成员",
     "type": "类型",
