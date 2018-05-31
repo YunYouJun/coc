@@ -1,9 +1,9 @@
 <template>
   <div>
     <el-container>
-      <el-header>
+      <!-- <el-header> -->
         <MainHeader></MainHeader>
-      </el-header>
+      <!-- </el-header> -->
       <el-main>
         <nuxt/>
       </el-main>

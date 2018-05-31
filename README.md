@@ -40,9 +40,7 @@ Use Coc API to display and analyze
 
 ## Intend
 
-- Rank(Search)
 - 大本营等级图标 （playerInfo 组件）
-- hamburger 菜单
 - PlayerInfo 继续拆分组件
 - 图标素材完善
 - 国际化翻译(部分)

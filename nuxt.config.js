@@ -32,7 +32,7 @@ module.exports = {
     'element-theme-ink',
     { src: '~assets/css/coc.scss', lang: 'scss' },
     'prismjs/themes/prism.css',
-    '~/assets/css/github-markdown.css'
+    '~/assets/css/github-markdown.css',
   ],
   plugins: [
     '~/plugins/axios',
