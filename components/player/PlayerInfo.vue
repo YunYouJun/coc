@@ -90,7 +90,10 @@
 
     <el-card shadow="hover">
       <el-row>
-        <el-col :md="{span:14}" :xs="{span:24}">
+        <el-col :md="{span:2}" :xs="{span:24}">
+          <town-hall :townHallLevel="playerInfo.townHallLevel"></town-hall>
+        </el-col>
+        <el-col :md="{span:12}" :xs="{span:24}">
           <troops-info :troops="playerInfo.troops"></troops-info>
         </el-col>
         <el-col :md="{span:6}" :xs="{span:24}">
@@ -103,55 +106,24 @@
     </el-card>
 
     <h4>家乡成就</h4>
-    <el-card class="achievements-item" v-for="item in playerInfo.achievements" v-if="item.village==='home'" :key="item.name" shadow="hover">
-      <el-row :gutter="10">
-        <el-col :span="3">
-          <el-rate
-            :max="3"
-            v-model="item.stars"
-            disabled
-            text-color="#ff9900"
-            >
-          </el-rate>
-        </el-col>
-        <el-col :span="21">
-          {{ item.name }}
-          |
-          {{ item.info }}
-          <!-- <span class="right-info">{{ item.value }}</span> -->
-          <span class="right-info">{{ item.completionInfo }}</span>
-        </el-col>
-      </el-row>
-    </el-card>
+    <div class="achievements-item" v-for="achievement in playerInfo.achievements" v-if="achievement.village==='home'" :key="achievement.name">
+      <achievement :achievement="achievement"></achievement>
+    </div>
 
     <h4>建筑大师基地成就</h4>
-    <el-card class="achievements-item" v-for="item in playerInfo.achievements" v-if="item.village==='builderBase'" :key="item.name" shadow="hover">
-      <el-row :gutter="10">
-        <el-col :span="3">
-          <el-rate
-            :max="3"
-            v-model="item.stars"
-            disabled
-            text-color="#ff9900"
-            >
-          </el-rate>
-        </el-col>
-        <el-col :span="21">
-          {{ item.name }}
-          |
-          {{ item.info }}
-          <!-- <span class="right-info">{{ item.value }}</span> -->
-          <span class="right-info">{{ item.completionInfo }}</span>
-        </el-col>
-      </el-row>
-    </el-card>
+    <div class="achievements-item" v-for="achievement in playerInfo.achievements" v-if="achievement.village==='builderBase'" :key="achievement.name">
+      <achievement :achievement="achievement"></achievement>
+    </div>
   </div>
 </template>
 
 <script>
+import TownHall from '~/components/player/TownHall'
 import TroopsInfo from '~/components/player/TroopsInfo'
 import SpellsInfo from '~/components/player/SpellsInfo'
 import HeroesInfo from '~/components/player/HeroesInfo'
+
+import Achievement from '~/components/player/Achievement'
 
 export default {
   props: ['playerInfo'],
@@ -182,9 +154,11 @@ export default {
     }
   },
   components: {
+    TownHall,
     TroopsInfo,
     SpellsInfo,
-    HeroesInfo
+    HeroesInfo,
+    Achievement
   }
 }
 </script>
@@ -196,9 +170,5 @@ export default {
 .right-info {
   float: right;
   padding-right: 10px; 
-}
-
-.achievements-item {
-  margin-bottom: 10px;
 }
 </style>

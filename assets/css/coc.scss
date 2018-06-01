@@ -14,6 +14,11 @@ body {
   text-align: center;
 }
 
+// item
+.achievements-item {
+  margin-bottom: 10px;
+}
+
 // icon
 .league-icon {
   width: 24px;
@@ -21,11 +26,15 @@ body {
   vertical-align: -7px!important;
 }
 
+.townhall-icon {
+  width: 90px;
+}
+
 .spell-item {
   position: relative;
   display: inline-block;
   .spell-icon {
-    width: 35px;
+    width: $icon-width;
     margin: 2px;
     padding: 0px;
     // border: 1px solid #000;
@@ -63,7 +72,7 @@ body {
   position: relative;
   display: inline-block;
   .troop-icon {
-    width: 35px;
+    width: $icon-width;
     margin: 2px;
     padding: 0px;
     // border: 1px solid #000;
@@ -101,7 +110,7 @@ body {
   position: relative;
   display: inline-block;
   .hero-icon {
-    width: 35px;
+    width: $icon-width;
     margin: 2px;
     padding: 0px;
     // border: 1px solid #000;
