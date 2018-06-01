@@ -189,6 +189,9 @@ export default {
       this.getAllClanMembersInfo()
     }
   },
+  mounted () {
+    this.getAllClanMembersInfo()
+  },
   methods: {
     goToPlayerInfo (playerTag) {
       this.$router.push({path: '/players/' + playerTag.replace('#', '')})

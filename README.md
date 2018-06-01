@@ -40,9 +40,8 @@ Use Coc API to display and analyze
 
 ## Intend
 
-- 大本营等级图标 （playerInfo 组件）
 - PlayerInfo 继续拆分组件
-- 图标素材完善
+- 图标素材完善(镜像法术、黑水药水、英雄图标)
 - 国际化翻译(部分)
 - 科技值权重计算  [TechValue](docs/TechValue.md)
 - 使用 [qqbot](https://github.com/pandolia/qqbot) http API， 实现群内部落战提醒
