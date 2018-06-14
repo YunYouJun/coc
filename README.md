@@ -4,10 +4,13 @@
 
 > Coc Info Web
 
+直到后来我发现了这个网站 [ClashOfStats](https://www.clashofstats.com/cn)
+
+好像做了的功能它也有，没做的功能它也有！
+
 ![野蛮人](https://raw.githubusercontent.com/YunYouJun/coc/master/assets/img/Clash_Barbarian.png)
 
 ## Intro
-
 
 Use Coc API to display and analyze
 
@@ -93,17 +96,3 @@ $ npm start
 部落QQ群: 365376497
 
 [![琦琦部落](https://pub.idqqimg.com/wpa/images/group.png)](https://shang.qq.com/wpa/qunwpa?idkey=343208cf41d8999818f1bc24b2e9ec87f9cf6d3d46613293e210a32df85d20d6)
-
-## Donate
-
-如果愿意赞助的话……
-
-<details>
-<summary>Ali Pay</summary>
-<p><img src="https://yunyoujun.cn/images/donate/alipay.jpg"></p>
-</details>
-
-<details>
-<summary>Wechat Pay</summary>
-<p><img src="https://yunyoujun.cn/images/donate/wechatpay.png"></p>
-</details>

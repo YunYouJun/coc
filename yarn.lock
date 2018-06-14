@@ -6694,6 +6694,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-about-me@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/vue-about-me/-/vue-about-me-0.0.4.tgz#efa5f9f6e8a368bbfd17f00f7501d7d63fc5451e"
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "http://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
