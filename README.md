@@ -8,6 +8,8 @@
 
 好像做了的功能它也有，没做的功能它也有！
 
+大概没什么继续做下去的意义了……
+
 ![野蛮人](https://raw.githubusercontent.com/YunYouJun/coc/master/assets/img/Clash_Barbarian.png)
 
 ## Intro
