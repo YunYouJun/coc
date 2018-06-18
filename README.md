@@ -94,7 +94,6 @@ $ npm start
 
 ## Contact
 
+部落QQ群: 114602790
 
-部落QQ群: 365376497
-
-[![琦琦部落](https://pub.idqqimg.com/wpa/images/group.png)](https://shang.qq.com/wpa/qunwpa?idkey=343208cf41d8999818f1bc24b2e9ec87f9cf6d3d46613293e210a32df85d20d6)
+[![端午事变(琦开&机智)](https://pub.idqqimg.com/wpa/images/group.png)](https://shang.qq.com/wpa/qunwpa?idkey=fba9c91094a3496cdf24c58c712628e5338a72f8240550f518e1cd4158b27563)
