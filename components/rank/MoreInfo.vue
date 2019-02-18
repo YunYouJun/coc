@@ -247,7 +247,7 @@ export default {
     // get info
     getClanMemberListByTag (clanTag) {
       let self = this
-      return this.$axios.get('api/clans/' + utils.tagify(clanTag) + '/members')
+      return this.$axios.get('clans/' + utils.tagify(clanTag) + '/members')
       .then(function(res){
         return res.data
       })
@@ -264,7 +264,7 @@ export default {
     },
     getPlayerInfoByTag (playerTag) {
       let self = this
-      return this.$axios.get('api/players/' + utils.tagify(playerTag))
+      return this.$axios.get('players/' + utils.tagify(playerTag))
       .then(function(res){
         res.data.friendInNeed = res.data.achievements[14].value //  friend in need
         res.data.sharingIsCaring = res.data.achievements[23].value //  sharing is caring

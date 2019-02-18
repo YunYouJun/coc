@@ -1,7 +1,7 @@
 let TOKEN = process.env.COC_API_TOKEN
 export default function ({ $axios, redirect }) {
   $axios.setToken(TOKEN, 'Bearer')
-  
+  // $axios.setHeader('Access-Control-Allow-Origin', '*')
   $axios.onRequest(config => {
     console.log('Making request to ' + config.url)
   })

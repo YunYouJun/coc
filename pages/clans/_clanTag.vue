@@ -16,7 +16,7 @@ import ClanInfo from '~/components/clan/ClanInfo'
 
 export default {
   asyncData ({ params, $axios }) {
-    return $axios.get(`api/clans/%23${params.clanTag}`)
+    return $axios.get(`clans/%23${params.clanTag}`)
     .then((res) => {
       return {
         clanInfo: res.data,

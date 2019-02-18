@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     getClanInfoByTag (clanTag) {
-      return this.$axios.get('api/clans/' + utils.tagify(clanTag))
+      return this.$axios.get('clans/' + utils.tagify(clanTag))
       .then(function(res){
         return res.data
       })

@@ -8,7 +8,7 @@
 
 好像做了的功能它也有，没做的功能它也有！
 
-大概没什么继续做下去的意义了……
+本项目停止维护
 
 ![野蛮人](https://raw.githubusercontent.com/YunYouJun/coc/master/assets/img/Clash_Barbarian.png)
 
@@ -45,15 +45,6 @@ Use Coc API to display and analyze
 - DEMO (use prism to highlight)
 - i18n (use element & vue-i18n)
 - Markdown => Html (use vue-markdown-loader)
-
-## Intend
-
-- PlayerInfo 继续拆分组件
-- 图标素材完善(镜像法术、黑水药水、英雄图标)
-- 国际化翻译(部分)
-- 科技值权重计算  [TechValue](docs/TechValue.md)
-- 使用 [qqbot](https://github.com/pandolia/qqbot) http API， 实现群内部落战提醒
-- donate page
 
 ## Build Setup
 

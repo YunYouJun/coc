@@ -16,7 +16,7 @@ import PlayerInfo from '~/components/player/PlayerInfo'
 
 export default {
   asyncData ({ params, $axios }) {
-    return $axios.get(`api/players/%23${params.playerTag}`)
+    return $axios.get(`players/%23${params.playerTag}`)
     .then((res) => {
       return {
         playerInfo: res.data,

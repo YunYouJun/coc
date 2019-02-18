@@ -34,7 +34,7 @@ export default {
     getClanInfoByTag (clanTag) {
       if (!clanTag) return
       let self = this
-      return this.$axios.get('api/clans/' + utils.tagify(clanTag))
+      return this.$axios.get('clans/' + utils.tagify(clanTag))
       .then(function(res){
         self.clanInfo = res.data
         return res.data

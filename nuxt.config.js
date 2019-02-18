@@ -79,9 +79,6 @@ module.exports = {
       config.module.rules.push(new VueLoaderPlugin())
     }
   },
-  generate: {
-    routes: ['/', '/clans/28VPJVGC', '/clans/LLP0GYCU']
-  },
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/dotenv'
@@ -89,7 +86,9 @@ module.exports = {
   axios: {
     proxy: true
   },
-  proxy: {
-    '/api/': { target: 'https://api.clashofclans.com/v1/', pathRewrite: {'^/api/': ''} }
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+    browserBaseURL: 'https://api.clashofclans.com/v1/'
+    // proxy: true
   }
 }

@@ -36,7 +36,7 @@ export default {
   methods: {
     getPlayerInfoByTag (playerTag) {
       let self = this
-      return this.$axios.get('api/players/' + utils.tagify(playerTag))
+      return this.$axios.get('players/' + utils.tagify(playerTag))
       .then(function(res){
         self.playerInfo = res.data
         return res.data
