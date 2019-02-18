@@ -1,6 +1,6 @@
 <template>
   <div class="VueToNuxtLogo">
-    <img src="~/assets/img/Clash_Barbarian.png" width="300">
+    <img src="~assets/img/Clash_Barbarian.png" width="300">
   </div>
 </template>
 

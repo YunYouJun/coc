@@ -4,7 +4,7 @@
       <!-- <hamburger class="hamburger-container" :isActive="navbar.open" :toggleClick="toggleNavBar"></hamburger> -->
       
       <el-menu-item index="/">
-        <img width="25px" src="~/assets/img/favicon.png">
+        <img width="25px" src="~assets/img/favicon.png">
       </el-menu-item>
 
       <template v-for="(menuItem, key) in menuItems">
@@ -34,13 +34,13 @@
 </template>
 
 <script>
-import Hamburger from '@/components/navbar/Hamburger'
+// import Hamburger from '@/components/navbar/Hamburger'
 import LangSelect from '~/components/common/LangSelect'
 
 export default {
   name: 'Navbar',
   components: {
-    Hamburger,
+    // Hamburger,
     LangSelect
   },
   data () {

@@ -104,7 +104,4 @@ export default {
   float: right;
   padding-right: 10px; 
 }
-.vertical-center {
-
-}
 </style>

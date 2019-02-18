@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import readme from '~/README.md'
+import readme from '@/README.md'
 
 export default {
   head () {
@@ -35,7 +35,6 @@ export default {
 <style lang="scss" scoped>
 .markdown-body {
   font-family: Lato, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-
   box-sizing: border-box;
   min-width: 200px;
   max-width: 980px;

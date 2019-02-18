@@ -106,13 +106,17 @@
     </el-card>
 
     <h4>家乡成就</h4>
-    <div class="achievements-item" v-for="achievement in playerInfo.achievements" v-if="achievement.village==='home'" :key="achievement.name">
-      <achievement :achievement="achievement"></achievement>
+    <div class="achievements-item" v-for="achievement in playerInfo.achievements"  :key="achievement.name">
+      <template v-if="achievement.village==='home'">
+        <achievement :achievement="achievement"></achievement>
+      </template>
     </div>
 
     <h4>建筑大师基地成就</h4>
-    <div class="achievements-item" v-for="achievement in playerInfo.achievements" v-if="achievement.village==='builderBase'" :key="achievement.name">
-      <achievement :achievement="achievement"></achievement>
+    <div class="achievements-item" v-for="achievement in playerInfo.achievements"  :key="achievement.name">
+      <template v-if="achievement.village==='builderBase'">
+        <achievement :achievement="achievement"></achievement>
+      </template>
     </div>
   </div>
 </template>

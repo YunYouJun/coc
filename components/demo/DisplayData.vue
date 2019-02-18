@@ -7,15 +7,14 @@
 
 <script>
 import Prism from 'prismjs'
-import loadLanguages from 'prismjs/components/index.js'
-
+import loadLanguages from 'prismjs/components/'
+loadLanguages(['json'])
 export default {
   name: 'DisplayData',
   props: ['data'],
   methods: {
     highlight (data) {
       let code = JSON.stringify(data, null, '\t')
-      loadLanguages(['json'])
       return Prism.highlight(code , Prism.languages.json, 'json')
     }
   }

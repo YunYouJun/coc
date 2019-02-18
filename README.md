@@ -1,6 +1,6 @@
 # coc
 
-[![Build Status](https://www.travis-ci.org/YunYouJun/coc.svg?branch=master)](https://www.travis-ci.org/YunYouJun/coc)
+[![Build Status](https://travis-ci.com/YunYouJun/coc.svg?branch=master)](https://travis-ci.com/YunYouJun/coc)
 
 > Coc Info Web
 
@@ -58,9 +58,9 @@ Use Coc API to display and analyze
 ## Build Setup
 
 若想要本地使用，请自行前往 [Clash Of Clans API](https://developer.clashofclans.com) 申请您 IP 地址对应的 `TOKEN` 。
-并参考 `env.example.js` 配置于其中。
+并参考 `.env.example` 配置于其中。
 
-> 请将 `env.example.js` 重命名为 `env.js`
+> 记得将 `.env.example` 重命名为 `.env`
 
 此处默认您了解 `git` 与 `npm`/`yarn` 命令行的基本使用。（若不了解，请参考其他教程。）
 
@@ -79,14 +79,14 @@ $ npm run build
 $ npm start
 ```
 
-## BackUp
-
-- [heroku](https://coc-api.herokuapp.com) (No Token)
-
 ## About
 
 此项目为兴趣之作，不作盈利目的。
 请勿恶意频繁刷新发送多次请求。(我的小水管服务器顶不住/(ㄒ^ㄒ)/~~)
+
+[![琦开得胜](https://www.clashofstats.com/signatures/clans/28VPJVGC?lng=en&color=dark-blue&size=large)](https://www.clashofstats.com/clans/28VPJVGC/members)
+
+[![机智一族](https://www.clashofstats.com/signatures/clans/LLP0GYCU?lng=en&color=dark-blue&size=large)](https://www.clashofstats.com/clans/LLP0GYCU/members)
 
 ---
 

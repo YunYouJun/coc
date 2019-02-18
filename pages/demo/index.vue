@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <img src="~/assets/img/gear.png" width="300">
+    <img src="~assets/img/gear.png" width="300">
     <h1> API Test </h1>
 
     <el-row :gutter="20">

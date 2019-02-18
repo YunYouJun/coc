@@ -1,4 +1,6 @@
 const pkg = require('./package')
+require('dotenv').config()
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   router: {
@@ -32,12 +34,12 @@ module.exports = {
     'element-theme-ink',
     { src: '~assets/css/coc.scss', lang: 'scss' },
     'prismjs/themes/prism.css',
-    '~/assets/css/github-markdown.css',
+    '~assets/css/github-markdown.css',
   ],
   plugins: [
-    '~/plugins/axios',
-    { src: '~/plugins/element-ui', ssr: true },
-    { src: '~/plugins/utils.js', ssr: false }
+    '~plugins/axios',
+    { src: '~plugins/element-ui', ssr: true },
+    { src: '~plugins/utils.js', ssr: false }
   ],
   /*
   ** Customize the progress bar color
@@ -60,19 +62,29 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    },
-    extend (config, { isDev, isClient }) {
       config.module.rules.push({
-        test: /\.md/,
-        loader: 'vue-markdown-loader'
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader'
+          },
+          {
+            loader: 'vue-markdown-loader/lib/markdown-compiler',
+            options: {
+              raw: true
+            }
+          }
+        ]
       })
-    },
+      config.module.rules.push(new VueLoaderPlugin())
+    }
   },
   generate: {
     routes: ['/', '/clans/28VPJVGC', '/clans/LLP0GYCU']
   },
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/dotenv'
   ],
   axios: {
     proxy: true
